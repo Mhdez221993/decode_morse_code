@@ -47,3 +47,10 @@ def decode_helper(code)
     code
   end
 end
+
+def decode_morse(morse)
+  decoded = ''
+  morse_array = morse.split(/\s/)
+  morse_array.each { |code| decoded << decode_helper(code) }
+  decoded.upcase
+end
