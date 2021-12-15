@@ -48,9 +48,20 @@ def decode_helper(code)
   end
 end
 
+# Add code here vishal
+
 def decode_morse(morse)
   decoded = ''
   morse_array = morse.split(/\s/)
   morse_array.each { |code| decoded << decode_helper(code) }
   decoded.upcase
 end
+
+puts decode_char('.-').to_s
+# A
+puts decode_word('-- -.--').to_s
+# MY
+puts decode_morse('-- -.--   -. .- -- .')
+# MY NAME
+puts decode_morse('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-. / .-. ..- -... .. . ...').to_s
+# A  BOX  FULL  OF/RUBIES
