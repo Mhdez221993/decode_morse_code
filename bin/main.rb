@@ -51,10 +51,10 @@ end
 def decode_char(char)
   MORSE_DICT[char].upcase
 end
+
 def decode_word(word)
   word.split.map { |char| MORSE_DICT[char] }.join
 end
-
 
 def decode_morse(morse)
   decoded = ''
